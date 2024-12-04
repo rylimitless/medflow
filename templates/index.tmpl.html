@@ -1,42 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light" />
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css"
-  >
-    <title>Hello world!</title>
-  </head>
-  <body>
-    <main class="container">
-          <div class="grid">
-            <!-- Side nav rail -->
-           <div style="border-right:1px solid rgb(71, 31, 134); width: 200px; padding: 0px; margin: 0px;">
 
-            <aside>
-                <nav>
-                    <ul>
-              <li><strong>MedFlo</strong></li>
-                    </ul>
-                  <ul>
-                    <li><a href="amb_system.tmpl.html">Ambulance Ecosystem</a></li>
-                    <li><a href="comm_hub.tmpl.html">Communication Hub</a></li>
-                    <li><a href="#">Patient Records</a></li>
-                    <li><a href="#">Analytics And Insights</a></li>
-                    
-                  </ul>
-                </nav>
-              </aside>
-           </div>
-           <div>
-            <h1>
-                Hello 
-            </h1>
-           </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css">
+  <title>Home Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedFlo - Real-Time Health Response</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .feature {
+      flex: 1 1 45%;
+      /* Grow, shrink, and set the basis to 45% to account for gap */
+      box-sizing: border-box;
+      /* Include padding and border in the element's total width and height */
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #C7F8C2;
+      margin: 10px 0 10px 10px;
+      /* Optional: Add some vertical margin */
+    }
+
+    .feature img {
+      max-width: 100%;
+    }
+
+    .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="grid">
+      <!-- Side nav rail -->
+      <div style="border-right:1px solid rgb(71, 31, 134); width: 200px; padding: 0px; margin: 0px;">
+
+        <aside>
+          <nav>
+            <ul>
+              <li><a href="index.tmpl.html" style="color: black;"><strong style="font-size: 30px;font-family: 'Trebuchet MS', sans-serif;">MedFlo</strong></a></li>
+            </ul>
+            <ul>
+              <li><a href="amb_system.tmpl.html">Ambulance Ecosystem</a></li>
+              <li><a href="comm_hub.tmpl.html">Communication Hub</a></li>
+              <li><a href="#">Patient Records</a></li>
+              <li><a href="analytics.tmpl.html">Analytics And Insights</a></li>
+
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <div style="padding:-10px; margin-left:-500px">
+        <h1 style="font-family: 'Trebuchet MS', sans-serif; color: green; text-align: center;"> MedFlo</h1>
+        <section class="description">
+          <h2>About MedFlo</h2>
+          <p>MedFlo is a cloud-based, real-time health response system that integrates ambulance and hospital
+            operations, enabling seamless data sharing, efficient resource management, and improved emergency care
+            outcomes.</p>
+        </section>
+
+        <h2 style=" text-align: center;">Features</h2>
+
+        <section class="features">
+          <div class="feature">
+            <h3>Real-Time Data Sharing</h3>
+            <p>Sync patient status, ETA, and care needs between ambulances and hospitals.</p>
           </div>
-    </main>
-  </body>
+          <div class="feature">
+            <h3>Patient Record Access</h3>
+            <p>Enhanced and secured access to patient medical histories for paramedics and hospital staff.</p>
+          </div>
+          <div class="feature">
+            <h3>Communication Hub</h3>
+            <p>Streamlined communication for EMS teams, hospital staff, and patient.</p>
+          </div>
+          <div class="feature">
+            <h3>Analytics and Insights</h3>
+            <p>Provide data on response times, resource usage, and patient outcomes to identify bottlenecks and optimize
+              workflows.</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>

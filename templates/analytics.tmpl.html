@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics and Insights</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css"
+  >
+    <style>
+        :root {
+            --primary-color: #38bdf8;
+            --secondary-color: #14b8a6;
+            --warning-color: #f87171;
+            --bg-color: #f8fafc;
+            --text-color: #475569;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .stat-card h3 {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .number {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+
+        .chart-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .reports-section {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .report-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .report-item:last-child {
+            border-bottom: none;
+        }
+
+        .report-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .patients-table {
+            width: 100%;
+            margin-top: 24px;
+            border-collapse: collapse;
+        }
+
+        .patients-table th,
+        .patients-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .patients-table th {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <main class="container">
+        <div class="grid">
+          <!-- Side nav rail -->
+         <div style="border-right:1px solid rgb(71, 31, 134); width: 200px; padding: 0px; margin: 0px;">
+
+          <aside>
+              <nav>
+                  <ul>
+            <li><a href="index.tmpl.html" style="color: black;"><strong style="font-size: 30px;font-family: 'Trebuchet MS', sans-serif;">MedFlo</strong></a></li>
+                  </ul>
+                <ul>
+                  <li><a href="amb_system.tmpl.html">Ambulance Ecosystem</a></li>
+                  <li><a href="comm_hub.tmpl.html">Communication Hub</a></li>
+                  <li><a href="#">Patient Records</a></li>
+                  <li><a href="analytics.tmpl.html">Analytics And Insights</a></li>
+                  
+                </ul>
+              </nav>
+            </aside>
+         </div>
+         <div style="padding:-10px; margin-left:-500px">
+          <h1>
+              Analytics and Insights
+          </h1>
+
+          <div class="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Patients</h3>
+                    <div class="number">2,040</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Staff</h3>
+                    <div class="number">17,000</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Rooms</h3>
+                    <div class="number">4,800</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Ambulances</h3>
+                    <div class="number">3,000</div>
+                </div>
+            </div>
+    
+            <div class="main-content">
+                <div class="chart-section">
+                    <h2>Patient Statistics</h2>
+                    <canvas id="patientChart"></canvas>
+                </div>
+                
+                <div class="reports-section">
+                    <h2>Reports</h2>
+                    <div class="report-item">
+                        <div class="report-icon" style="background: #f1f5f9;">🚽</div>
+                        <div>
+                            <h4>2nd Floor Bathroom</h4>
+                            <small>1 minute ago</small>
+                        </div>
+                    </div>
+                    <div class="report-item">
+                        <div class="report-icon" style="background: #fee2e2;">⚠️</div>
+                        <div>
+                            <h4>Oxygen Tanks Running Low</h4>
+                            <small>1 minute ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="patients-section">
+                <h2>Latest Patients</h2>
+                <table class="patients-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Country</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GH-224536</td>
+                            <td>Carlos Sainz</td>
+                            <td>24</td>
+                            <td>El Salvador</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>GH-224537</td>
+                            <td>Thomas Shelby</td>
+                            <td>21</td>
+                            <td>Jamaica</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>GH-224538</td>
+                            <td>Bobby Singer</td>
+                            <td>34</td>
+                            <td>Trinidad</td>
+                            <td>Male</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+         </div>
+        </div>
+  </main>
+
+
+    <script>
+        // Initialize patient statistics chart
+        const ctx = document.getElementById('patientChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['20', '21', '22', '23', '24', '25', '26'],
+                datasets: [{
+                    label: 'Patients',
+                    data: [3000, 2800, 3200, 3800, 2800, 3100, 3300],
+                    borderColor: '#14b8a6',
+                    backgroundColor: 'rgba(20, 184, 166, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -10,9 +10,9 @@
   >
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   >
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css.css">
     <title>MedFlo</title>
   </head>
   <body>
@@ -24,19 +24,19 @@
             <aside>
                 <nav>
                     <ul>
-              <li><strong>MedFlo</strong></li>
+                     <li><a href="index.tmpl.html" style="color: black;"><strong style="font-size: 30px;font-family: 'Trebuchet MS', sans-serif;">MedFlo</strong></a></li>
                     </ul>
                   <ul>
-                    <li><a href="templates/amb_system.tmpl.html">Ambulance Ecosystem</a></li>
-                    <li><a href="templates/comm_hub.tmpl.html">Communication Hub</a></li>
+                    <li><a href="amb_system.tmpl.html">Ambulance Ecosystem</a></li>
+                    <li><a href="comm_hub.tmpl.html">Communication Hub</a></li>
                     <li><a href="#">Patient Records</a></li>
-                    <li><a href="#">Analytics And Insights</a></li>
+                    <li><a href="analytics.tmpl.html">Analytics And Insights</a></li>
                     
                   </ul>
                 </nav>
               </aside>
            </div>
-           <div style="padding:-10px; margin-left:-300px">
+           <div style="padding:-10px; margin-left:-500px">
             <h1>
                 Communication Hub
             </h1>
@@ -44,25 +44,31 @@
               <!-- Sidebar -->
               <div class="sidebar">
                   <ul id="userList">
-                      <li class="user">Alice</li>
-                      <li class="user">Bob</li>
-                      <li class="user">Charlie</li>
+                    <li class="user" onclick="selectUser('Alice')">Alice Brown</li>
+                    <li class="user" onclick="selectUser('Bob')">Bob Black</li>
+                    <li class="user" onclick="selectUser('Charlie')">Charlie Green</li>
                   </ul>
               </div>
       
               <!-- Chat Area -->
               <div class="chat-area">
+                <div class="chat-header">
+                  <div id="selectedUser" class="selected-user">
+                      <!-- Selected user and icons will be displayed here -->
+                  </div>
+              </div>
                   <div id="chatWindow" class="chat-window">
                       <!-- Messages will appear here -->
                   </div>
                   <div class="message-input">
                       <input type="text" id="messageInput" placeholder="Type your message...">
-                      <button id="sendButton">Send</button>
+                      <button id="sendButton" onclick="sendMessage()">Send</button>
                   </div>
               </div>
           </div>
            </div>
           </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

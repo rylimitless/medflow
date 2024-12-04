@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css"
+  >
+  <link rel="stylesheet" href="styles.css">
+    <title>MedFlo</title>
+  </head>
+  <body>
+    <main class="container">
+          <div class="grid">
+            <!-- Side nav rail -->
+           <div style="border-right:1px solid rgb(71, 31, 134); width: 200px; padding: 0px; margin: 0px;">
+
+            <aside>
+                <nav>
+                    <ul>
+              <li><strong>MedFlo</strong></li>
+                    </ul>
+                  <ul>
+                    <li><a href="templates/amb_system.tmpl.html">Ambulance Ecosystem</a></li>
+                    <li><a href="templates/comm_hub.tmpl.html">Communication Hub</a></li>
+                    <li><a href="#">Patient Records</a></li>
+                    <li><a href="#">Analytics And Insights</a></li>
+                    
+                  </ul>
+                </nav>
+              </aside>
+           </div>
+           <div style="padding:-10px; margin-left:-300px">
+            <h1>
+                Communication Hub
+            </h1>
+            <div class="chat-container">
+              <!-- Sidebar -->
+              <div class="sidebar">
+                  <ul id="userList">
+                      <li class="user">Alice</li>
+                      <li class="user">Bob</li>
+                      <li class="user">Charlie</li>
+                  </ul>
+              </div>
+      
+              <!-- Chat Area -->
+              <div class="chat-area">
+                  <div id="chatWindow" class="chat-window">
+                      <!-- Messages will appear here -->
+                  </div>
+                  <div class="message-input">
+                      <input type="text" id="messageInput" placeholder="Type your message...">
+                      <button id="sendButton">Send</button>
+                  </div>
+              </div>
+          </div>
+           </div>
+          </div>
+    </main>
+  </body>
+</html>

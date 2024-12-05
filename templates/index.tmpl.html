@@ -66,19 +66,19 @@
         <aside>
           <nav>
             <ul>
-              <li><a href="index.tmpl.html" style="color: black;"><strong style="font-size: 30px;font-family: 'Trebuchet MS', sans-serif;">MedFlo</strong></a></li>
+              <li><a href="{{ url_for('index') }}" style="color: black;"><strong style="font-size: 30px;font-family: 'Trebuchet MS', sans-serif;">MedFlo</strong></a></li>
             </ul>
             <ul>
-              <li><a href="amb_system.tmpl.html">Ambulance Ecosystem</a></li>
-              <li><a href="comm_hub.tmpl.html">Communication Hub</a></li>
-              <li><a href="#">Patient Records</a></li>
-              <li><a href="analytics.tmpl.html">Analytics And Insights</a></li>
+              <li><a href="{{ url_for('amb') }}">Ambulance Ecosystem</a></li>
+              <li><a href="{{ url_for('hub1') }}">Communication Hub</a></li>
+              <li><a href="{{ url_for('hub2') }}">Patient Records</a></li>
+              <li><a href="{{ url_for('hub3') }}">Analytics And Insights</a></li>
 
             </ul>
           </nav>
         </aside>
       </div>
-      <div style="padding:-10px; margin-left:-500px">
+      <div style="padding:-10px; margin-left:-300px">
         <h1 style="font-family: 'Trebuchet MS', sans-serif; color: green; text-align: center;"> MedFlo</h1>
         <section class="description">
           <h2>About MedFlo</h2>

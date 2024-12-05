@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.green.min.css"
+  >
+  <link rel="stylesheet" href="styles.css">
+    <title>MedFlo</title>
+  </head>
+  <body>
+    <main class="container">
+          <div class="grid">
+            <!-- Side nav rail -->
+           <div style="border-right:1px solid rgb(71, 31, 134); width: 200px; padding: 0px; margin: 0px;">
+
+            <aside>
+              <nav>
+                <ul>
+                  <li><a href="{{ url_for('index') }}" style="color: black;"><strong style="font-size: 30px;font-family: 'Trebuchet MS', sans-serif;">MedFlo</strong></a></li>
+                </ul>
+                <ul>
+                  <li><a href="{{ url_for('amb') }}">Ambulance Ecosystem</a></li>
+                  <li><a href="{{ url_for('hub1') }}">Communication Hub</a></li>
+                  <li><a href="{{ url_for('hub2') }}">Patient Records</a></li>
+                  <li><a href="{{ url_for('hub3') }}">Analytics And Insights</a></li>
+    
+                </ul>
+              </nav>
+            </aside>
+           </div>
+           <div style="padding:-10px; margin-left:-300px">
+            <h1>
+                Patient Records
+            </h1>
+            <div class="chat-container">
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> John Doe<br>
+                    <strong>Age:</strong> 45<br>
+                    <strong>Condition:</strong> Hypertension
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Jane Smith<br>
+                    <strong>Age:</strong> 30<br>
+                    <strong>Condition:</strong> Diabetes
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Michael Brown<br>
+                    <strong>Age:</strong> 50<br>
+                    <strong>Condition:</strong> Asthma
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Emily Davis<br>
+                    <strong>Age:</strong> 25<br>
+                    <strong>Condition:</strong> Allergies
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> William Johnson<br>
+                    <strong>Age:</strong> 60<br>
+                    <strong>Condition:</strong> Arthritis
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Olivia Wilson<br>
+                    <strong>Age:</strong> 35<br>
+                    <strong>Condition:</strong> Migraine
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> James Martinez<br>
+                    <strong>Age:</strong> 40<br>
+                    <strong>Condition:</strong> Back Pain
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Sophia Anderson<br>
+                    <strong>Age:</strong> 28<br>
+                    <strong>Condition:</strong> Depression
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Benjamin Thomas<br>
+                    <strong>Age:</strong> 55<br>
+                    <strong>Condition:</strong> High Cholesterol
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Mia Jackson<br>
+                    <strong>Age:</strong> 22<br>
+                    <strong>Condition:</strong> Anxiety
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Lucas White<br>
+                    <strong>Age:</strong> 48<br>
+                    <strong>Condition:</strong> Obesity
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px;">
+                    <strong>Patient Name:</strong> Amelia          </div>
+           </div>
+          </div>
+    </main>
+  </body>
+</html>
